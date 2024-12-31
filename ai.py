@@ -34,7 +34,7 @@ def generate_unique_uid():
     :param existing_data: The original JSON array (list of dictionaries)
     :return: A unique 4-character UID
     """
-    with open('backend/existing_ids.json', 'r') as file:  
+    with open('./existing_ids.json', 'r') as file:  
       existing_data = json.load(file)
     # Generate a random 4-character UID
     def generate_uid():
@@ -50,7 +50,7 @@ def generate_unique_uid():
     
     # Add the new UID to the existing data (assuming each item should have a unique UID)
     existing_data.append({"uid": new_uid})
-    with open('backend/existing_ids.json', 'w') as file:
+    with open('./existing_ids.json', 'w') as file:
         json.dump(existing_data, file, indent=4)
                   
     return new_uid
