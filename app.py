@@ -41,10 +41,7 @@ mongo = PyMongo(app, uri="mongodb+srv://mithun27:MITHUN123@cluster1.bidbx.mongod
 # Routes
 @app.route('/')
 def home():
-    return send_from_directory(app.static_folder, 'index.html')
-
-
-# Signup
+    return "running"
 @app.route('/api/signup', methods=['POST'])
 def signup():
     try:
